@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carmen San Paulo Web</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">ACME DETECTIVE NET</p>
+          <h1>Carmen San Paulo: Investigação Global</h1>
+        </div>
+        <div class="topbar-actions">
+          <label>
+            Caso
+            <select id="case-selector"></select>
+          </label>
+          <button id="start-case-btn" class="btn btn-primary">Iniciar Caso</button>
+        </div>
+      </header>
+
+      <section class="status-strip">
+        <div class="status-item">
+          <span class="label">Status</span>
+          <strong id="status-text">Carregando...</strong>
+        </div>
+        <div class="status-item">
+          <span class="label">Tempo Restante</span>
+          <strong id="time-left">--</strong>
+        </div>
+        <div class="status-item">
+          <span class="label">Local Atual</span>
+          <strong id="current-location">--</strong>
+        </div>
+        <div class="status-item">
+          <span class="label">Mandado</span>
+          <strong id="warrant-status">Não emitido</strong>
+        </div>
+      </section>
+
+      <section class="main-grid">
+        <article class="panel videophone">
+          <h2>Videofone ACME</h2>
+          <div class="screen-wrap">
+            <img id="screen-image" src="data/acme/chief.png" alt="Tela do videofone" />
+          </div>
+          <p id="speaker-name" class="speaker">Chefe</p>
+          <div id="dialogue-box" class="dialogue-box"></div>
+
+          <div class="action-grid">
+            <button class="btn" data-action="witness">Testemunha</button>
+            <button class="btn" data-action="search">Vasculhar</button>
+            <button class="btn" data-action="crimenet">CrimeNet</button>
+            <button id="travel-btn" class="btn">Travel</button>
+            <button id="warrant-btn" class="btn">Emitir Mandado</button>
+            <button id="capture-btn" class="btn btn-danger">Capturar</button>
+          </div>
+        </article>
+
+        <article class="panel location-panel">
+          <h2>Rastro Internacional</h2>
+          <div class="location-image-wrap">
+            <img id="location-image" src="data/acme/world_map.jpg" alt="Local atual" />
+          </div>
+          <p id="location-description" class="location-description"></p>
+
+          <h3>Registro de Investigação</h3>
+          <ul id="event-log" class="event-log"></ul>
+        </article>
+
+        <article class="panel dossier-panel">
+          <h2>Dataminder</h2>
+          <div id="evidence-fields" class="evidence-fields"></div>
+          <button id="run-warrant-btn" class="btn btn-primary">Processar Mandado</button>
+
+          <h3>Pistas de Identidade Coletadas</h3>
+          <ul id="identity-log" class="identity-log"></ul>
+
+          <details class="settings-box">
+            <summary>Voz dos personagens (OpenAI / Whisper)</summary>
+            <p class="hint">
+              Modo padrão: somente texto. Opcionalmente informe sua API key para gerar
+              áudio dos diálogos.
+            </p>
+            <p class="hint">
+              Nota: Whisper e usado para transcricao; para fala este MVP usa TTS da OpenAI.
+            </p>
+            <label>
+              <span>OpenAI API Key</span>
+              <input id="openai-key" type="password" placeholder="sk-..." autocomplete="off" />
+            </label>
+            <label>
+              <span>Modelo</span>
+              <input id="openai-model" type="text" value="gpt-4o-mini-tts" />
+            </label>
+            <label>
+              <span>Voz</span>
+              <select id="openai-voice">
+                <option value="alloy">alloy</option>
+                <option value="verse">verse</option>
+                <option value="sage">sage</option>
+                <option value="luna">luna</option>
+              </select>
+            </label>
+            <label class="inline-toggle">
+              <input id="voice-enabled" type="checkbox" />
+              <span>Ativar voz OpenAI</span>
+            </label>
+            <button id="save-voice-settings" class="btn">Salvar Configuração de Voz</button>
+            <p id="voice-status" class="hint"></p>
+          </details>
+        </article>
+      </section>
+    </div>
+
+    <div id="travel-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-content">
+        <h2>Escolha seu próximo voo</h2>
+        <p id="travel-hint"></p>
+        <div id="travel-options" class="travel-options"></div>
+        <button id="close-travel-modal" class="btn">Fechar</button>
+      </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

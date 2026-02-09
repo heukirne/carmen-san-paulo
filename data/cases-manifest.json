@@ -1,0 +1,11 @@
+{
+  "defaultCaseId": "case-br-001",
+  "cases": [
+    {
+      "id": "case-br-001",
+      "label": "Caso 001: Operação Frota Fantasma",
+      "language": "pt-BR",
+      "path": "data/cases/case-br-001.json"
+    }
+  ]
+}

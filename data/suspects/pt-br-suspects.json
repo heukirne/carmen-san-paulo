@@ -1,0 +1,107 @@
+{
+  "language": "pt-BR",
+  "fields": [
+    {
+      "id": "gender",
+      "label": "Gênero",
+      "options": ["feminino", "masculino"]
+    },
+    {
+      "id": "hair",
+      "label": "Cabelo",
+      "options": ["preto", "castanho", "loiro", "ruivo"]
+    },
+    {
+      "id": "eyes",
+      "label": "Olhos",
+      "options": ["azuis", "verdes", "castanhos", "cinza"]
+    },
+    {
+      "id": "trait",
+      "label": "Traço marcante",
+      "options": ["cicatriz", "tatuagem", "joias", "peruca"]
+    },
+    {
+      "id": "hobby",
+      "label": "Hobby",
+      "options": ["tenis", "alpinismo", "mergulho", "croquet"]
+    },
+    {
+      "id": "food",
+      "label": "Comida favorita",
+      "options": ["mexicana", "chinesa", "fast-food", "frutos do mar"]
+    },
+    {
+      "id": "vehicle",
+      "label": "Veículo",
+      "options": ["motocicleta", "conversivel", "limusine", "skate"]
+    }
+  ],
+  "suspects": [
+    {
+      "id": "merey-laroc",
+      "name": "Merey LaRoc",
+      "attributes": {
+        "gender": "feminino",
+        "hair": "castanho",
+        "eyes": "verdes",
+        "trait": "joias",
+        "hobby": "tenis",
+        "food": "mexicana",
+        "vehicle": "limusine"
+      }
+    },
+    {
+      "id": "nick-brunch",
+      "name": "Nick Brunch",
+      "attributes": {
+        "gender": "masculino",
+        "hair": "loiro",
+        "eyes": "verdes",
+        "trait": "cicatriz",
+        "hobby": "alpinismo",
+        "food": "frutos do mar",
+        "vehicle": "motocicleta"
+      }
+    },
+    {
+      "id": "dazzle-annie",
+      "name": "Dazzle Annie Nonker",
+      "attributes": {
+        "gender": "feminino",
+        "hair": "loiro",
+        "eyes": "azuis",
+        "trait": "tatuagem",
+        "hobby": "tenis",
+        "food": "chinesa",
+        "vehicle": "limusine"
+      }
+    },
+    {
+      "id": "scar-graynolt",
+      "name": "Scar Graynolt",
+      "attributes": {
+        "gender": "masculino",
+        "hair": "preto",
+        "eyes": "castanhos",
+        "trait": "cicatriz",
+        "hobby": "croquet",
+        "food": "fast-food",
+        "vehicle": "conversivel"
+      }
+    },
+    {
+      "id": "carmen-san-paulo",
+      "name": "Carmen San Paulo",
+      "attributes": {
+        "gender": "feminino",
+        "hair": "ruivo",
+        "eyes": "castanhos",
+        "trait": "joias",
+        "hobby": "mergulho",
+        "food": "frutos do mar",
+        "vehicle": "conversivel"
+      }
+    }
+  ]
+}

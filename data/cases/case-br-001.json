@@ -1,0 +1,343 @@
+{
+  "id": "case-br-001",
+  "title": "Operacao Frota Fantasma",
+  "language": "pt-BR",
+  "metadata": {
+    "difficulty": "iniciante",
+    "clueTypes": [
+      "landmark",
+      "currency",
+      "culture",
+      "historical_figure",
+      "identity"
+    ]
+  },
+  "ui": {
+    "backgroundImage": "data/acme/world_map.jpg",
+    "travelImage": "data/acme/travel_agent.png",
+    "chiefImage": "data/acme/chief.png",
+    "captureImage": "data/acme/judge_sentence.png",
+    "fallbackLocationImage": "data/acme/reykjavik_port.jpg"
+  },
+  "settings": {
+    "deadlineHours": 144,
+    "actionCosts": {
+      "witness": 2,
+      "search": 2,
+      "crimenet": 3,
+      "warrant": 2,
+      "capture": 1
+    }
+  },
+  "suspectsData": "data/suspects/pt-br-suspects.json",
+  "suspectId": "merey-laroc",
+  "route": [
+    "reykjavik",
+    "viena",
+    "cairo",
+    "nairobi",
+    "mumbai"
+  ],
+  "briefing": {
+    "speaker": "Chefe",
+    "image": "data/acme/chief.png",
+    "text": "Detective, a frota pesqueira da Islandia desapareceu. Temos 6 dias para achar o culpado da V.I.L.E."
+  },
+  "ending": {
+    "successText": "Prisao confirmada. O suspeito foi levado ao tribunal e a ACME recuperou a frota.",
+    "failNoWarrantText": "Sem mandado valido, a policia local nao pode prender o suspeito. Ele escapou.",
+    "failWrongWarrantText": "Mandado emitido para o suspeito errado. O verdadeiro criminoso fugiu.",
+    "timeoutText": "Seu prazo terminou. A investigacao foi encerrada por falta de tempo."
+  },
+  "locations": [
+    {
+      "id": "reykjavik",
+      "name": "Reykjavik",
+      "country": "Islandia",
+      "description": "Cena do crime inicial. Porto congelado e muito movimento de carga.",
+      "image": "data/acme/reykjavik_port.jpg",
+      "wrongTravelText": "Destino incorreto. As pistas locais nao fazem sentido com o caso.",
+      "travelOptions": [
+        {
+          "to": "viena",
+          "label": "Viena, Austria",
+          "hours": 8
+        },
+        {
+          "to": "londres",
+          "label": "Londres, Reino Unido",
+          "hours": 5
+        },
+        {
+          "to": "ottawa",
+          "label": "Ottawa, Canada",
+          "hours": 6
+        }
+      ],
+      "actions": {
+        "witness": {
+          "speaker": "Bibliotecaria",
+          "text": "A suspeita perguntou onde nasceu Sigmund Freud antes de embarcar.",
+          "reveals": [
+            {
+              "type": "destination",
+              "value": "viena",
+              "clueType": "historical_figure"
+            }
+          ]
+        },
+        "search": {
+          "speaker": "Perito",
+          "text": "No armazem achamos um recibo de tacos extremamente picantes.",
+          "reveals": [
+            {
+              "type": "identity",
+              "field": "food",
+              "value": "mexicana",
+              "clueType": "identity"
+            }
+          ]
+        },
+        "crimenet": {
+          "speaker": "CrimeNet",
+          "text": "Relatorio de camera: fuga em uma limusine preta alugada para uma mulher.",
+          "reveals": [
+            {
+              "type": "identity",
+              "field": "vehicle",
+              "value": "limusine",
+              "clueType": "identity"
+            },
+            {
+              "type": "identity",
+              "field": "gender",
+              "value": "feminino",
+              "clueType": "identity"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "viena",
+      "name": "Viena",
+      "country": "Austria",
+      "description": "Cafe historico e muitos turistas em torno dos museus.",
+      "image": "data/acme/vienna_scene.jpg",
+      "wrongTravelText": "Voce saiu da rota. Sem rastro util da V.I.L.E. nesse destino.",
+      "travelOptions": [
+        {
+          "to": "cairo",
+          "label": "Cairo, Egito",
+          "hours": 6
+        },
+        {
+          "to": "madri",
+          "label": "Madri, Espanha",
+          "hours": 4
+        },
+        {
+          "to": "roma",
+          "label": "Roma, Italia",
+          "hours": 3
+        }
+      ],
+      "actions": {
+        "witness": {
+          "speaker": "Motorista",
+          "text": "Ela falou que o proximo alvo ficava perto das grandes piramides.",
+          "reveals": [
+            {
+              "type": "destination",
+              "value": "cairo",
+              "clueType": "landmark"
+            }
+          ]
+        },
+        "search": {
+          "speaker": "Perita de Campo",
+          "text": "Encontramos um estojo com joias escondido no compartimento da mala.",
+          "reveals": [
+            {
+              "type": "identity",
+              "field": "trait",
+              "value": "joias",
+              "clueType": "identity"
+            }
+          ]
+        },
+        "crimenet": {
+          "speaker": "CrimeNet",
+          "text": "Ultimo saque usou libra egipcia. O voo saiu para o norte da Africa.",
+          "reveals": [
+            {
+              "type": "destination",
+              "value": "cairo",
+              "clueType": "currency"
+            },
+            {
+              "type": "identity",
+              "field": "hair",
+              "value": "castanho",
+              "clueType": "identity"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cairo",
+      "name": "Cairo",
+      "country": "Egito",
+      "description": "Mercado lotado e pistas passando por operadores de carga internacional.",
+      "image": "data/acme/cairo_scene.jpg",
+      "wrongTravelText": "Nada de relevante. Parece que a quadrilha nao passou por esse lugar.",
+      "travelOptions": [
+        {
+          "to": "nairobi",
+          "label": "Nairobi, Quenia",
+          "hours": 5
+        },
+        {
+          "to": "atenas",
+          "label": "Atenas, Grecia",
+          "hours": 3
+        },
+        {
+          "to": "doha",
+          "label": "Doha, Catar",
+          "hours": 4
+        }
+      ],
+      "actions": {
+        "witness": {
+          "speaker": "Guia Turistico",
+          "text": "A criminosa queria seguir para uma cidade de safaris e cafe forte.",
+          "reveals": [
+            {
+              "type": "destination",
+              "value": "nairobi",
+              "clueType": "culture"
+            }
+          ]
+        },
+        "search": {
+          "speaker": "Perito",
+          "text": "Na recepcao do hotel, a fugitiva reservou quadra para jogar tenis.",
+          "reveals": [
+            {
+              "type": "identity",
+              "field": "hobby",
+              "value": "tenis",
+              "clueType": "identity"
+            }
+          ]
+        },
+        "crimenet": {
+          "speaker": "CrimeNet",
+          "text": "Reconhecimento facial: olhos verdes. Rota confirmada para Nairobi.",
+          "reveals": [
+            {
+              "type": "identity",
+              "field": "eyes",
+              "value": "verdes",
+              "clueType": "identity"
+            },
+            {
+              "type": "destination",
+              "value": "nairobi",
+              "clueType": "culture"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "nairobi",
+      "name": "Nairobi",
+      "country": "Quenia",
+      "description": "Centro financeiro e conexao com varias rotas para a Asia.",
+      "image": "data/acme/nairobi_scene.jpg",
+      "wrongTravelText": "O contato local nao reconhece o suspeito. Rastro frio.",
+      "travelOptions": [
+        {
+          "to": "mumbai",
+          "label": "Mumbai, India",
+          "hours": 7
+        },
+        {
+          "to": "sydney",
+          "label": "Sydney, Australia",
+          "hours": 10
+        },
+        {
+          "to": "cape-town",
+          "label": "Cidade do Cabo, Africa do Sul",
+          "hours": 8
+        }
+      ],
+      "actions": {
+        "witness": {
+          "speaker": "Comerciante",
+          "text": "Ela trocou dinheiro por rupias e falou em seguir para Mumbai.",
+          "reveals": [
+            {
+              "type": "destination",
+              "value": "mumbai",
+              "clueType": "currency"
+            }
+          ]
+        },
+        "search": {
+          "speaker": "Perita de Campo",
+          "text": "Fios castanhos presos em um broche com pedras verdes.",
+          "reveals": [
+            {
+              "type": "identity",
+              "field": "hair",
+              "value": "castanho",
+              "clueType": "identity"
+            }
+          ]
+        },
+        "crimenet": {
+          "speaker": "CrimeNet",
+          "text": "A foragida embarcou rumo a Mumbai ha menos de uma hora. Voce esta perto.",
+          "reveals": [
+            {
+              "type": "destination",
+              "value": "mumbai",
+              "clueType": "currency"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mumbai",
+      "name": "Mumbai",
+      "country": "India",
+      "description": "Ultimo ponto da fuga. Equipes locais da ACME aguardam sua ordem.",
+      "image": "data/acme/world_map.jpg",
+      "wrongTravelText": "",
+      "travelOptions": [],
+      "actions": {
+        "witness": {
+          "speaker": "Oficial ACME",
+          "text": "Alvo visualizado na area portuaria. Emitiu o mandado correto?",
+          "reveals": []
+        },
+        "search": {
+          "speaker": "Perito",
+          "text": "Vestigios recentes confirmam que a suspeita ainda esta na cidade.",
+          "reveals": []
+        },
+        "crimenet": {
+          "speaker": "CrimeNet",
+          "text": "Recomendacao final: execute a captura apenas com mandado valido.",
+          "reveals": []
+        }
+      }
+    }
+  ]
+}
