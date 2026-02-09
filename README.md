@@ -1,6 +1,6 @@
 # Carmen San Paulo Web (MVP)
 
-Versao web inspirada em **Where in the World is Carmen San Diego? Deluxe Edition (1992)**, com foco em:
+Versao web inspirada em [Where in the World is Carmen San Diego? Deluxe Edition (1992)](https://www.youtube.com/watch?v=zJ7tIdE_75Y), com foco em:
 
 - Interface retro responsiva (desktop e celular)
 - Casos configurados por JSON (locais, pistas, imagens, idioma, rota)
