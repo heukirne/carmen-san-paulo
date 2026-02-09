@@ -13,11 +13,11 @@
     ]
   },
   "ui": {
-    "backgroundImage": "data/acme/world_map.jpg",
+    "backgroundImage": "data/acme/world_map.png",
     "travelImage": "data/acme/travel_agent.png",
     "chiefImage": "data/acme/chief.png",
     "captureImage": "data/acme/judge_sentence.png",
-    "fallbackLocationImage": "data/acme/reykjavik_port.jpg"
+    "fallbackLocationImage": "data/cases/case-br-001/assets/reykjavik_port.png"
   },
   "settings": {
     "deadlineHours": 144,
@@ -55,7 +55,7 @@
       "name": "Reykjavik",
       "country": "Islandia",
       "description": "Cena do crime inicial. Porto congelado e muito movimento de carga.",
-      "image": "data/acme/reykjavik_port.jpg",
+      "image": "data/cases/case-br-001/assets/reykjavik_port.png",
       "wrongTravelText": "Destino incorreto. As pistas locais nao fazem sentido com o caso.",
       "travelOptions": [
         {
@@ -123,7 +123,7 @@
       "name": "Viena",
       "country": "Austria",
       "description": "Cafe historico e muitos turistas em torno dos museus.",
-      "image": "data/acme/vienna_scene.jpg",
+      "image": "data/cases/case-br-001/assets/vienna_scene.png",
       "wrongTravelText": "Voce saiu da rota. Sem rastro util da V.I.L.E. nesse destino.",
       "travelOptions": [
         {
@@ -190,7 +190,7 @@
       "name": "Cairo",
       "country": "Egito",
       "description": "Mercado lotado e pistas passando por operadores de carga internacional.",
-      "image": "data/acme/cairo_scene.jpg",
+      "image": "data/cases/case-br-001/assets/cairo_scene.png",
       "wrongTravelText": "Nada de relevante. Parece que a quadrilha nao passou por esse lugar.",
       "travelOptions": [
         {
@@ -257,7 +257,7 @@
       "name": "Nairobi",
       "country": "Quenia",
       "description": "Centro financeiro e conexao com varias rotas para a Asia.",
-      "image": "data/acme/nairobi_scene.jpg",
+      "image": "data/cases/case-br-001/assets/nairobi_scene.png",
       "wrongTravelText": "O contato local nao reconhece o suspeito. Rastro frio.",
       "travelOptions": [
         {
@@ -318,7 +318,7 @@
       "name": "Mumbai",
       "country": "India",
       "description": "Ultimo ponto da fuga. Equipes locais da ACME aguardam sua ordem.",
-      "image": "data/acme/world_map.jpg",
+      "image": "data/acme/world_map.png",
       "wrongTravelText": "",
       "travelOptions": [],
       "actions": {

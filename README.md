@@ -24,7 +24,8 @@ Depois abra `http://localhost:8080`.
 - `index.html`: UI principal
 - `styles/main.css`: visual retro responsivo
 - `js/main.js`: motor de jogo e fluxo da investigacao
-- `data/acme/`: imagens usadas pelo jogo/casos
+- `data/acme/`: imagens comuns entre casos (UI/ACME)
+- `data/cases/case-br-001/assets/`: imagens especificas do Caso 001
 - `data/cases-manifest.json`: lista de casos disponiveis
 - `data/cases/case-br-001.json`: configuracao completa do caso
 - `data/suspects/pt-br-suspects.json`: banco de suspeitos + campos de evidencia

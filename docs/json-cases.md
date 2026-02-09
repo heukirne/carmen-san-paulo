@@ -96,4 +96,5 @@ Arquivo exemplo: `data/suspects/pt-br-suspects.json`
 - Inclua ao menos 2 pistas de identidade antes do mandado.
 - Em cada local nao-final, adicione pelo menos 1 pista de destino para o proximo ponto da rota.
 - Mantenha `route` e IDs dos locais consistentes.
-- Reaproveite imagens em `data/acme/` ou adicione novas em pastas dedicadas.
+- Coloque imagens comuns em `data/acme/`.
+- Coloque imagens especificas de um caso em `data/cases/<case-id>/assets/`.

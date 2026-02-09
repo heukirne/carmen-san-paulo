@@ -18,7 +18,7 @@ A prioridade é manter o jogo **data-driven** (casos e suspeitos em JSON), sem a
 - `data/cases-manifest.json`: catálogo de casos
 - `data/cases/*.json`: definição de cada investigação
 - `data/suspects/*.json`: campos de evidência e base de suspeitos por idioma
-- `data/acme/`: imagens usadas pelo jogo
+- `data/acme/`: imagens comuns (compartilhadas entre casos)
 - `docs/json-cases.md`: referência de modelagem dos casos
 
 ## Regras de conteúdo
@@ -35,7 +35,8 @@ A prioridade é manter o jogo **data-driven** (casos e suspeitos em JSON), sem a
 ## Convenções de assets
 - `ref/` é material bruto de referência e está no `.gitignore`.
 - Não referencie `ref/` no código/jogo.
-- Use apenas caminhos versionados em `data/acme/...`.
+- Imagens compartilhadas ficam em `data/acme/...`.
+- Imagens de um caso especifico ficam em `data/cases/<case-id>/assets/...`.
 - Ao adicionar imagem nova:
   - prefira nome descritivo em minúsculas com `_`
   - atualize os JSONs do caso
